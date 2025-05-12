@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  /* Dark theme removed - using light theme only */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation utility classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+.animate-slide-in-bottom {
+  animation: slideInFromBottom 0.6s ease-in-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.6s ease-in-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.6s ease-in-out forwards;
+}
+
+/* Animation delay utilities */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Custom styles for sections */
+.section-padding {
+  @apply py-12 md:py-16 lg:py-20;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6;
+}
+
+.section-subtitle {
+  @apply text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 max-w-3xl;
+}
+
+/* Card hover effects */
+.hover-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* Custom gradient backgrounds */
+.bg-gradient-primary {
+  @apply bg-gradient-to-r from-dark-teal to-medium-teal;
+}
+
+.bg-gradient-secondary {
+  @apply bg-gradient-to-r from-medium-teal to-light-teal;
+}
+
+.bg-gradient-accent {
+  @apply bg-gradient-to-r from-medium-teal-alt to-dark-teal;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground;
+}
+
+/* Image hover effects */
+.img-hover-zoom {
+  @apply overflow-hidden;
+}
+
+.img-hover-zoom img {
+  @apply transition-transform duration-500 ease-in-out;
+}
+
+.img-hover-zoom:hover img {
+  @apply transform scale-105;
+}
+
+/* Text gradient */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-dark-teal to-medium-teal;
+}
+
+/* Button hover effects */
+.btn-hover-slide {
+  @apply relative overflow-hidden;
+}
+
+.btn-hover-slide::after {
+  content: "";
+  @apply absolute top-0 left-0 w-full h-full bg-white/20 transform -translate-x-full transition-transform duration-300;
+}
+
+.btn-hover-slide:hover::after {
+  @apply transform translate-x-0;
+}
+
+/* Additional utility classes for better contrast */
+.high-contrast-text {
+  @apply text-foreground font-medium;
+}
+
+.high-contrast-text-light {
+  @apply text-white font-medium;
+}
+
+/* Ensure buttons have good contrast */
+.btn {
+  @apply font-medium;
+}
+
+/* Ensure card content has good contrast */
+.card-content {
+  @apply text-card-foreground;
+}
