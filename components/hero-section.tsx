@@ -512,7 +512,7 @@ export default function HeroSection({
               transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse", delay: 1 }}
             />
             <motion.div
-              className="absolute left-0 top-0 w-full h-full border-t-0 border-l-[24px] border-r-[24px] border-l-transparent border-r-transparent border-b-[#14b8a6]/20 transform-style-3d transform -translate-y-1/2 rotate-y-270"
+              className="absolute left-0 top-0 w-full h-full border-t-0 border-l-[24px] border-r-[24px] border-l-transparent border-r-transparent border-b-[#013A87]/20 transform-style-3d transform -translate-y-1/2 rotate-y-270"
               animate={{
                 borderBottomColor: ["rgba(20,184,166,0.2)", "rgba(20,184,166,0.4)", "rgba(20,184,166,0.2)"],
                 filter: [
@@ -535,7 +535,7 @@ export default function HeroSection({
           }}
         >
           <motion.div
-            className="relative w-full h-full rounded-full border-2 border-[#14b8a6]/30"
+            className="relative w-full h-full rounded-full border-2 border-[#013A87]/30"
             style={{
               transformStyle: "preserve-3d",
             }}
@@ -574,7 +574,7 @@ export default function HeroSection({
         <div className="max-w-4xl">
           {/* Enhanced title with character-by-character animation */}
           <div className="overflow-hidden mb-6 relative">
-            <div className="absolute -left-8 top-1/2 w-6 h-[2px] bg-gradient-to-r from-[#0e766e] to-transparent"></div>
+            <div className="absolute -left-8 top-1/2 w-6 h-[2px] bg-gradient-to-r from-[#013A87] to-transparent"></div>
 
             <motion.div
               className="relative"
@@ -582,7 +582,7 @@ export default function HeroSection({
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="text-3xl md:text-4xl lg:text-6xl font-bold text-white overflow-hidden flex flex-wrap">
+              <div className="text-4xl md:text-4xl lg:text-6xl font-bold text-white overflow-hidden flex flex-wrap">
                 {titleChars.map((char, i) => (
                   <motion.span
                     key={i}
@@ -645,7 +645,7 @@ export default function HeroSection({
                 }}
               />
               <motion.p
-                className="text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed pl-2 backdrop-blur-sm bg-[#0e766e]/10 rounded-md p-4 border-l-2 border-[#0e766e]"
+                className="text-xl md:text-2xl text-white/90 max-w-3xl leading-relaxed pl-2 backdrop-blur-sm bg-[#0e766e]/10 rounded-md p-4 border-l-2 border-[#0e766e]"
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}

@@ -168,21 +168,21 @@ export default function Header() {
             ))}
           </div>
           <motion.button
-            className="md:hidden focus:outline-none bg-white text-dark-teal border border-[#017489] p-2 rounded-lg"
+            className="md:hidden focus:outline-none bg-[#0e766e] text-white border border-[#0e766e] p-2 rounded-lg"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
             whileTap={{ scale: 0.9 }}
             whileHover={{ scale: 1.1 }}
           >
             {mobileMenuOpen ? (
-              <X className="w-5 h-5 text-[#017489]" />
+              <X className="w-5 h-5 text-white" />
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                className="w-5 h-5 text-[#017489]"
+                className="w-5 h-5 text-white"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -294,7 +294,7 @@ function NavLink({ href, label }: { href: string; label: string }) {
     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
       <Link href={href} className="relative overflow-hidden group">
         <motion.div
-          className="px-4 py-2 rounded-lg bg-gray-100 text-gray-700 font-medium relative z-10 overflow-hidden"
+          className="px-4 py-2 rounded-lg bg-dark-teal text-white font-medium relative z-10 overflow-hidden"
           whileHover={{
             boxShadow: ["0 0 5px rgba(0,0,0,0.1)", "0 0 15px rgba(0,0,0,0.2)", "0 0 5px rgba(0,0,0,0.1)"],
           }}
@@ -324,7 +324,7 @@ function NavDropdown({
   return (
     <div className="relative group">
       <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        <button className="relative overflow-hidden px-4 py-2 rounded-lg bg-gray-100 text-gray-700 font-medium flex items-center group">
+        <button className="relative overflow-hidden px-4 py-2 rounded-lg bg-dark-teal text-white font-medium flex items-center group">
           {label}
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
@@ -383,13 +383,13 @@ function NavDropdown({
               transition={{ delay: index * 0.05 }}
               style={{ pointerEvents: "auto" }}
               whileHover={{
-                backgroundColor: "rgba(0,0,0,0.1)",
+                backgroundColor: "rgba(0,128,128,1)",
                 transition: { duration: 0.2 },
               }}
             >
               <Link
                 href={item.href}
-                className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                className="block px-4 py-2 text-sm text-gray-700 hover:text-white transition-colors duration-200"
               >
                 {item.label}
               </Link>
